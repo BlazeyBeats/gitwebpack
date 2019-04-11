@@ -1,4 +1,5 @@
 let path = require('path');
+const ExtractTextPlugin= require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './assets/js/script.js',
@@ -38,7 +39,16 @@ module.exports = {
         }),
         test:/\.css$/
     },
-    
+    {
+    test:/\.(png|woff|woff2|eot|ttf|svg)$/,
+    use:{
+        loader: 'file-loader',
+        options:{
+            outputPath:'css/fonts',
+            name:'[name].[ext]',
+        }
+    }
+}
 ]
        
     },
@@ -46,8 +56,8 @@ module.exports = {
 plugins:[
     new ExtractTextPlugin('./css/style.[hash].css'),
     new HtmlWebpackPlugin({
-        template: "assets/index/html",
-        favicon:"assets/images/favicon.ico"
+        template: "assets/index.html",
+    
     })
 ]
 }
