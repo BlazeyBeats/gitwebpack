@@ -1,3 +1,10 @@
+import $ from 'jquery';
+import imgbird from '../images/bird.jpg';
+import imgmouse from '../images/squirrel.jpg';
+
+$('#bird').attr("src",imgbird);
+$('#mouse').attr("src",imgmouse);
+
 $(document).ready(function () {
 	// when a hanburger menu is clicked
 	let $ul = $(".nav__list"),
