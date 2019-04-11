@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$(document).ready(function () {\n\t// when a hanburger menu is clicked\n\tlet $ul = $(\".nav__list\"),\n\t\t $menu = $(\".nav__menu\");\n\n\t$($menu).click(function () {\n\t\t// toggle menu-click Class\n\t\t$ul.toggleClass(\"menu-click\");\n\t}); // end click event handler\n});\n\n\n//# sourceURL=webpack:///./assets/js/script.js?");
+eval("$(document).ready(function () {\n  // when a hanburger menu is clicked\n  var $ul = $(\".nav__list\"),\n      $menu = $(\".nav__menu\");\n  $($menu).click(function () {\n    // toggle menu-click Class\n    $ul.toggleClass(\"menu-click\");\n  }); // end click event handler\n});\n\n//# sourceURL=webpack:///./assets/js/script.js?");
 
 /***/ })
 
