@@ -31,7 +31,19 @@ module.exports = {
             },
             'image-webpack-loader'
         ]
-    }
+    },
+    {
+        use: ExtractTextPlugin.extract({
+            use:'css-loader'
+        }),
+        test:/\.css$/
+    },
+    
 ]
-    }
+       
+    },
+
+plugins:[
+    new ExtractTextPlugin('./css/style.css')
+]
 }

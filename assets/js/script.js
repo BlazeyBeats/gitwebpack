@@ -1,6 +1,9 @@
 import $ from 'jquery';
+import 'bootstrap';
 import imgbird from '../images/bird.jpg';
 import imgmouse from '../images/squirrel.jpg';
+import '../css/normalize.css';
+import '../css/style.css';
 
 $('#bird').attr("src",imgbird);
 $('#mouse').attr("src",imgmouse);
